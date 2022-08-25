@@ -21,9 +21,9 @@ from datetime import datetime, timezone
 
 # -- Project information -----------------------------------------------------
 
-project = "OEPS Docs"
+project = "FED3 Docs"
 copyright = "2010-{}, Open Ephys & Contributors".format(datetime.now(timezone.utc).year)
-author = "Open Ephys & Contributors"
+author = "Kravitzlab"
 
 # The short X.Y version
 version = "0.0"
@@ -104,7 +104,7 @@ html_style = "_static/theme_overrides.css"
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "oe_docs"
+htmlhelp_basename = "fed3_docs"
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -135,7 +135,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(main_doc, "oe-docs", "Open Ephys Documentation", [author], 1)]
+man_pages = [(main_doc, "fed3-docs", "Open Ephys Documentation", [author], 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------
@@ -179,7 +179,7 @@ epub_exclude_files = ["search.html"]
 # documentation.
 # documentation.
 html_theme_options = {
-    "github_url": "https://github.com/open-ephys",
+    "github_url": "https://github.com/ahleighton",
     "twitter_url": "https://twitter.com/openephys",
     "external_links": [{"name": "Open Ephys", "url": "https://open-ephys.org"},],
     "navigation_with_keys": True,
@@ -202,7 +202,7 @@ html_favicon = "_static/images/favicon.png"
 
 html_context = {
     "github_user": "ahleighton",
-    "github_repo": "oeps-docs",
+    "github_repo": "fed3",
     "github_version": "main",
     "doc_path": "source",
     "css_files": ["_static/theme_overrides.css",],
