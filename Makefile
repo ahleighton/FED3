@@ -4,8 +4,8 @@
 # You can set these variables from the command line.
 SPHINXOPTS    = -Dversion=$(shell git tag --sort=committerdate | tail -1)
 SPHINXBUILD   = sphinx-build
-SOURCEDIR     = docs/source
-BUILDDIR      = docs/docs
+SOURCEDIR     = source
+BUILDDIR      = docs
 
 # Put it first so that "make" without argument is like "make help".
 help:
