@@ -6,10 +6,10 @@ FED3
 
 **Date**: |today|
 
-This site provides documentation for [INSERT PROJECT HERE], that [SHORT DESCRIPTION OF STUFF PROJECT DOES].
+This site provides documentation for FED3. FED3 is an open-source battery-powered device for home-cage training of mice in operant tasks. FED3 can be 3D printed and the control code is open-source and can be modified. The code is written in the Arduino language and is run on a Feather M0 Adalogger microcontroller inside of FED3.
 
-It is currently under construction
-####################################
+This site is currently under construction
+###########################################
 
 It will eventually include the following information:
 
