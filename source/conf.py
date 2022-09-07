@@ -21,9 +21,9 @@ from datetime import datetime, timezone
 
 # -- Project information -----------------------------------------------------
 
-project = "Open Ephys Documentation"
-copyright = "2010-{}, Open Ephys & Contributors".format(datetime.now(timezone.utc).year)
-author = "Open Ephys & Contributors"
+project = "FED3 Documentation"
+copyright = "2010-{}, KravitzLab & Contributors".format(datetime.now(timezone.utc).year)
+author = "KravitzLab & Contributors"
 
 # The short X.Y version
 version = "0.0"
@@ -102,7 +102,7 @@ html_style = "_static/theme_overrides.css"
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "oe_docs"
+htmlhelp_basename = "fed_docs"
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -125,7 +125,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (main_doc, "oe-docs.tex", "Open Ephys Documentation", "Open Ephys", "manual"),
+    (main_doc, "fed-docs.tex", "FED3 Documentation", "FED3", "manual"),
 ]
 
 
@@ -133,7 +133,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(main_doc, "oe-docs", "Open Ephys Documentation", [author], 1)]
+man_pages = [(main_doc, "fed-docs", "FED3 Documentation", [author], 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------
@@ -144,10 +144,10 @@ man_pages = [(main_doc, "oe-docs", "Open Ephys Documentation", [author], 1)]
 texinfo_documents = [
     (
         main_doc,
-        "Open Ephys Documentation",
-        "Open Ephys Documentation",
+        "FED3 Documentation",
+        "FED3 Documentation",
         author,
-        "Open Ephys Documentation",
+        "FED3 Documentation",
         "Description",
         "Miscellaneous",
     ),
@@ -176,20 +176,17 @@ epub_exclude_files = ["search.html"]
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-    'external_links': [{'name': 'Open Ephys', 'url': 'https://open-ephys.org'},],
+    'external_links': [{'name': 'KravitzLab', 'url': 'https://kravitzlab.com/fed3'},],
     'navigation_with_keys': True,
     'use_edit_page_button': True,
     'show_toc_level': 1,
     'icon_links': [
         dict(name='GitHub',
-             url='https://github.com/open-ephys/onix-docs',
+             url='https://github.com/KravitzLabDevices/FED3',
              icon='fab fa-github'),
         dict(name='Twitter',
-             url='https://twitter.com/openephys',
+             url='https://twitter.com/',
              icon='fab fa-twitter'),
-        dict(name='Discord',
-             url='https://discord.gg/WXAx2URNQU',
-             icon='fab fa-discord')
     ],
     'footer_items': ['copyright', 'sphinx-version'],
 }
