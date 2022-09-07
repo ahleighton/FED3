@@ -21,9 +21,9 @@ from datetime import datetime, timezone
 
 # -- Project information -----------------------------------------------------
 
-project = "FED3 Docs"
+project = "Open Ephys Documentation"
 copyright = "2010-{}, Open Ephys & Contributors".format(datetime.now(timezone.utc).year)
-author = "Kravitzlab"
+author = "Open Ephys & Contributors"
 
 # The short X.Y version
 version = "0.0"
@@ -41,11 +41,9 @@ release = "0.0.0"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx.ext.todo",
-    "sphinx.ext.githubpages"
-    # "contributors",  # custom pandas extension
+    'sphinx.ext.todo',
+    'sphinx.ext.githubpages',
 ]
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 
@@ -62,7 +60,7 @@ main_doc = "index"
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = "en"
+language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -80,7 +78,7 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 html_theme = "pydata_sphinx_theme"
-html_logo = "_static/images/oe_logo_name.svg"
+html_logo = "_static/images/oe_logo_template.svg"
 html_scaled_image_link = True
 
 
@@ -104,7 +102,7 @@ html_style = "_static/theme_overrides.css"
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "fed3_docs"
+htmlhelp_basename = "oe_docs"
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -135,7 +133,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(main_doc, "fed3-docs", "Open Ephys Documentation", [author], 1)]
+man_pages = [(main_doc, "oe-docs", "Open Ephys Documentation", [author], 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------
@@ -177,32 +175,29 @@ epub_exclude_files = ["search.html"]
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-# documentation.
 html_theme_options = {
-    "github_url": "https://github.com/ahleighton",
-    "twitter_url": "https://twitter.com/openephys",
-    "external_links": [{"name": "Open Ephys", "url": "https://open-ephys.org"},],
-    "navigation_with_keys": True,
-    # 'search_bar_position' : "navbar",
-    #'canonical_url': '',
-    #'analytics_id': '',
-    #'logo_only': False,
-    #
-    #'prev_next_buttons_location': 'bottom',
-    #'style_external_links': False,
-    # Toc options
-    #'collapse_navigation': False,
-    #'sticky_navigation': True,
-    #    'navigation_depth': 4,
-    #'includehidden': True,
-    #'titles_only': False
+    'external_links': [{'name': 'Open Ephys', 'url': 'https://open-ephys.org'},],
+    'navigation_with_keys': True,
+    'use_edit_page_button': True,
+    'show_toc_level': 1,
+    'icon_links': [
+        dict(name='GitHub',
+             url='https://github.com/open-ephys/onix-docs',
+             icon='fab fa-github'),
+        dict(name='Twitter',
+             url='https://twitter.com/openephys',
+             icon='fab fa-twitter'),
+        dict(name='Discord',
+             url='https://discord.gg/WXAx2URNQU',
+             icon='fab fa-discord')
+    ],
+    'footer_items': ['copyright', 'sphinx-version'],
 }
-
 html_favicon = "_static/images/favicon.png"
 
 html_context = {
     "github_user": "ahleighton",
-    "github_repo": "fed3",
+    "github_repo": "FED3",
     "github_version": "main",
     "doc_path": "source",
     "css_files": ["_static/theme_overrides.css",],

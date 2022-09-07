@@ -33,20 +33,40 @@
   font-weight: bold;
 }
 
-/* navigation bar: set header bar color*/
-.navbar {
-  background: #afc991 !important;
-  font-size: 1em;
+
+@font-face {
+  font-family: "Miso";
+  font-weight: bold;
+  src: url("fonts/miso.woff")  format('woff');
 }
 
-/* navigation bar text color*/
+@font-face {
+  font-family: "Miso Bold";
+  font-weight: bold;
+  src: url("fonts/miso-bold.woff")  format('woff');
+}
 
+@font-face {
+  font-family: "Miso Light";
+  font-weight: bold;
+  src: url("fonts/miso-light.woff")  format('woff');
+}
+
+
+/* overhead navigation bar*/
+.navbar {
+  background: #ade0dc !important; /* overhead navigation bar color */
+  font-size: 1rem;
+}
+
+/* navigation bar: text*/
 .navbar a {
   color: white !important;
-  font-family: "Bitter", sans-serif;
+  font-family: "Miso";
+  font-size: 1.2rem;
+  transition-duration: 0.4s;
   margin-right: 10px;
 }
-
 
 /* navigation bar: text color of page titles when hovered*/
 .navbar a:hover {
@@ -54,18 +74,12 @@
   transition-duration: 0.4s;
 }
 
-/* navigation bar when hovered upon: text color and transition duration of active page when hovered*/
-.navbar-nav > .active > .nav-link:hover {
-  color: #2f401f !important;
-  transition-duration: 0.4s;
-}
-
-/* navigation bar when selected: text background color and text color when section is selected*/
+/* navigation bar: when page title is selected*/
 .navbar-nav > .active > .nav-link {
-  background-color: #e6eddf !important;
-  color: #2f401f !important;
+  background-color: #e6eddf !important; /* selected text background fill */
+  color: #2f401f !important; /* selected text colour*/
   font-weight: normal !important;
-  transition-duration: 0.4s;
+  transition-duration: 0.4s; /* how quickly to change*/
 }
 
 /* left side links */
@@ -88,7 +102,7 @@
   border-left: 2px solid #da714a;
 }
 
-/* body links (external) */
+/* body text*/
 a {
   color: #0086b3;
 }
@@ -98,11 +112,12 @@ a:hover {
   text-decoration: none;
 }
 
+/* body links (external, add link icon) */
 a.reference.external:after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: ' \f35d';
-  font-size: 0.5em;
+  font-size: 0.5rem;
   vertical-align: super;
 }
 
@@ -110,6 +125,21 @@ a.external-link:after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: ' \f35d';
+  font-size: 0.5rem;
+  vertical-align: super;
+}
+
+p.card-reference {
+  margin: 2.75rem 0 1.05rem;
+  font-family: "Bitter", sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+  font-size: 1.1rem;
+}
+
+/* get rid of external link icon on linked images*/
+a.reference.external.image-reference:after {
+  content: ' ';
   font-size: 0.5em;
   vertical-align: super;
 }
@@ -130,65 +160,68 @@ a.headerlink:hover {
 body {
   background-color: white;
   margin-bottom: 1.15rem;
-  font-size: 1em;
+  font-size: 1rem;
   padding-top: 100px;
   color: #242c16;
   font-family: "Source Sans", sans-serif;
 }
 
 h1 {
-  margin: 2.75rem 0 1.05rem;
-  font-family: "Bitter", sans-serif;
-  font-weight: 400;
-  line-height: 1.15;
-  margin-top: 0;
-  color: #242c16;
-  font-size: 2.2em;
+    margin: 2.75rem 0 1.05rem;
+    font-family: "Miso";
+    font-weight: 400;
+    line-height: 1.15;
+    text-align: center;
+    margin-top: 0;
+    color: #242c16;
+    font-size: 2.5rem;
 }
 
 h2 {
   margin: 2.75rem 0 1.05rem;
-  font-family: "Bitter", sans-serif;
-  font-weight: 400;
+  font-family: "Miso";
+  font-weight: 500;
   line-height: 1.15;
   color: #242c16;
-  font-size: 1.5em;
+  font-size: 2rem;
 }
 
 h3 {
   margin: 0rem 0 1.05rem;
-  font-family: "Bitter", sans-serif;
+  font-family: "Source Sans", sans-serif;
   font-weight: 400;
   line-height: 1.15;
   color: #242c16;
-  font-size: 1.3em;
+  font-size: 1.3rem;
 }
 
 h4 {
   margin: 2.75rem 0 1.05rem;
-  font-family: "Bitter", sans-serif;
+  font-family: "Source Sans", sans-serif;
   font-weight: 400;
   line-height: 1.15;
   color: #242c16;
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 h5 {
   margin: 2.75rem 0 1.05rem;
   font-family: "Source Sans", sans-serif;
-  font-weight: 400;
+  font-style: italic;
+  font-weight: 550;
   line-height: 1.15;
   color: #242c16;
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 h6 {
   margin: 2.75rem 0 1.05rem;
   font-family: "Source Sans", sans-serif;
+  font-style: italic;
   font-weight: 400;
   line-height: 1.15;
   color: #242c16;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 /* define admonition colors */
@@ -336,11 +369,11 @@ form:focus {
 }
 
 .card-img-top {
-  margin-top: 4em;
+  margin-top: 4rem;
 }
 
 .col-lg-6 {
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 /* list line spacing */
@@ -369,7 +402,7 @@ h6 {
 body > li,
 p {
   line-height: 1.5;
-  margin: 0.3em 0;
+  margin: 0.3rem 0;
 }
 
 /* ensure images stay within the column bounds*/
